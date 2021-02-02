@@ -19,9 +19,14 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
+  loading: true,
   loading: {
-    color: "#000",
+    color: "gold",
     height: "5px"
+  },
+  pageTransition: {
+    name: 'home',
+    mode: 'out-in'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

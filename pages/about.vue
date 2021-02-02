@@ -23,22 +23,7 @@ meta:[
       loading: false
     };
   },
-    mounted() {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
 
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
-    })
-  
-},
-  methods: {
-    start() {
-      this.loading = true;
-    },
-    finish() {
-      this.loading = false;
-    }
-  },
   computed: {
     lee() {
       return 5 + 4;

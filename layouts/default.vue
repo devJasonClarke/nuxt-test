@@ -1,10 +1,39 @@
 <template>
   <div>
-    <TheNavBar />
+    <LazyTheNavBar/>
     <Nuxt />
+    <h1 >
+      lem mt
+    </h1>
   </div>
 </template>
+<script>
+export default {
+  data(){
+    return{
+      loading:false
+    }
+  },
+      mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
 
+      setTimeout(() => this.$nuxt.$loading.finish(), 700)
+    })
+  
+},
+  methods: {
+    start() {
+            console.log('gg');
+      this.loading = true;
+
+    },
+    finish() {
+      this.loading = false;
+    }
+  },
+}
+</script>
 <style>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",

@@ -1,27 +1,51 @@
 <template>
   <div class="body">
-   <h1>
+    <h1>
       This is the about page {{ name }} he is {{ lee }}
-      <p>yellow</p>
+      <p class="yel">yellow</p>
+      <button @click="change">change</button>
     </h1>
   </div>
 </template>
 
 <script>
+import gsap from "gsap";
+
 export default {
-  head(){
-    return{
-title: 'About Page',
-meta:[
-  {name: 'description', content: 'just a little something'}
-]
-    }
+  head() {
+    return {
+      title: "About Page",
+      meta: [{ name: "description", content: "just a little something" }]
+    };
   },
   data() {
     return {
       name: "Jason",
-      loading: false
+      loading: false,
+      toggle: 0
     };
+  },
+  methods: {
+    change() {
+      let tl = gsap.timeline();
+      if (this.toggle == 0) {
+    
+     tl.to(".yel", {
+          duration: .5,
+          x: 200,
+          color: "orange"
+        });
+        this.toggle++;
+       
+      } else if(this.toggle == 1){
+        tl.to(".yel", {
+          duration: .5,
+          x: 0,
+          color: "green"
+        });
+         this.toggle--;
+      }
+    }
   },
 
   computed: {
@@ -40,15 +64,15 @@ h1 {
   }
 }
 .loading-page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 0, 0, 0.8);
-    text-align: center;
-    padding-top: 200px;
-    font-size: 30px;
-    font-family: sans-serif;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.8);
+  text-align: center;
+  padding-top: 200px;
+  font-size: 30px;
+  font-family: sans-serif;
+}
 </style>

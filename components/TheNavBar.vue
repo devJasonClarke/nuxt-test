@@ -4,6 +4,7 @@
       <nuxt-link :to="{name: 'index'}">Home</nuxt-link>
       <nuxt-link :to="{name: 'data'}">Data</nuxt-link>
        <nuxt-link to="/posts/jason">Jason</nuxt-link>
+       <nuxt-link :to="{name: 'jarallax'}">Jarallax</nuxt-link>
     </nav>
 </template>
 

@@ -42,4 +42,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.home-enter-active, .home-leave-active { transition: opacity .5s; }
+.home-enter, .home-leave-active { opacity: 0; }
+</style>

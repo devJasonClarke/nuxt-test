@@ -28,7 +28,7 @@ export const state = () => ({
     }
   ],
   counter: 0,
-  list: {}
+  list:{}
 });
 
 export const getters = {
@@ -48,5 +48,5 @@ export const actions = {
 
 export const mutations = {
   ADD_ONE: state => (state.counter += 23),
-  LIST_IT: (state,j) => state.list = j.data
+  LIST_IT: (state,j) => state.list = j.data.body
 };

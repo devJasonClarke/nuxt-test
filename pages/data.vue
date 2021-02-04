@@ -5,7 +5,7 @@
       <button @click="addOne">addOne</button>
     </ul>
     <button @click="fetchSomething">App di</button>
-{{list.body}}
+{{list}}
   </div>
 </template>
 

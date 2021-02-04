@@ -16,6 +16,7 @@
       </div>
     </div>
     <div class="yy"   data-aos="fade-up"  data-aos-duration="3000"></div>
+    <nuxt-link :to="{name: 'about'}" rel="canonical">About</nuxt-link>
   </div>
 </template>
 

@@ -1,8 +1,7 @@
 <template>
   <div>
-    <LazyTheNavBar/>
     <Nuxt />
-    <h1 class="g">
+    <h1 >
       lem mt
     </h1>
   </div>
@@ -35,12 +34,6 @@ export default {
 }
 </script>
 <style>
-:root{
-  --lag: red;
-}
-.g{
-  color: var(--lag)
-}
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;

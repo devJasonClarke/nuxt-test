@@ -30,3 +30,12 @@ div {
     height: 100%;
     z-index: -1;
   }
+:root{
+  --orange: #fff;
+}
+
+@media screen and (max-width: 900px){
+    :root{
+        --orange: blue;
+    }
+}

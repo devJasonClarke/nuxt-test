@@ -35,13 +35,15 @@ export default {
 ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [  "@/plugins/aos.client", {src: '@/plugins/jarallax', ssr: false}],
+  plugins: [  "@/plugins/aos.client",  '@/plugins/jarallax.client'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [ '@nuxtjs/pwa'],
+
+
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios'],

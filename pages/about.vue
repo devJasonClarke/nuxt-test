@@ -3,6 +3,7 @@
     <h1>
       This is the about page {{ name }} he is {{ lee }}
       <p class="yel">yellow</p>
+      <h4 class="orange">Orange</h4>
       <button @click="change">change</button>
     </h1>
   </div>
@@ -12,6 +13,7 @@
 import gsap from "gsap";
 
 export default {
+
   head() {
     return {
       title: "About Page",
@@ -57,6 +59,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.orange{
+  color: var(--orange)
+}
 h1 {
   color: red;
   p {

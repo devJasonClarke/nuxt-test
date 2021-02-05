@@ -5,6 +5,7 @@
       <h1 class="title">
         learning-2
       </h1>
+      <h2 class="rr">gg</h2>
       <div class="links">
         <nuxt-link
           v-for="post in thePosts"
@@ -37,7 +38,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+$color: red;
+
+.rr{
+  color: $color;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -60,7 +67,7 @@ export default {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 9vw;
+  font-size: 10vw;
   color: #35495e;
   letter-spacing: 1px;
 }

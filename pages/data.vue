@@ -4,8 +4,13 @@
       <h1>{{ counter }}</h1>
       <button @click="addOne">addOne</button>
     </ul>
-    <button @click="fetchSomething">App di</button>
-{{list}}
+    <button @click="listThem">App di</button>
+    <p v-if="!loaded">Loading</p>
+    <p v-else>{{ list }}</p>
+
+    {{ added }}
+
+    <button @click="add">Added it</button>
   </div>
 </template>
 
@@ -14,25 +19,39 @@ import { mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {
-      ip: {}
+      ip: {},
+      loaded: false,
+      added: null
     };
   },
   computed: {
     ...mapGetters({ counter: "posts/count" }),
-    ...mapGetters({list : 'posts/list'})
+    ...mapGetters({ list: "posts/list" })
   },
   methods: {
     ...mapActions({ addOne: "posts/addOne" }),
-    ...mapActions({listAll: "posts/list"}),
-    async fetchSomething() {
-      const ip = await this.$axios.$get(
-        "https://jsonplaceholder.typicode.com/posts/12"
-      );
-      this.ip = ip;
+    ...mapActions({ listAll: "posts/list" }),
+    add() {
+      this.added++;
+    },
+    listThem() {
+      this.ip = this.listAll();
+      setTimeout(() => {
+        this.loaded = true;
+      }, 500);
     }
   },
-  created() {
-    this.listAll()
+  mounted() {
+    if (localStorage.add) {
+      this.added = localStorage.add;
+    }
+      this.listThem();
+  },
+  watch: {
+    added(newValue) {
+      localStorage.add = newValue;
+    },
+  
   }
 };
 </script>

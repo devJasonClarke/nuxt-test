@@ -4,6 +4,7 @@
     <h1 >
       lem mt
     </h1>
+    <TheNavBar />
   </div>
 </template>
 <script>

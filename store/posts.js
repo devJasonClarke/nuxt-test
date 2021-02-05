@@ -1,5 +1,3 @@
-import axios from "@nuxtjs/axios";
-
 export const state = () => ({
   all: [
     {
@@ -36,6 +34,7 @@ export const getters = {
   count: state => state.counter,
   list: state => state.list
 };
+
 export const actions = {
   addOne({ commit }) {
     commit("ADD_ONE");

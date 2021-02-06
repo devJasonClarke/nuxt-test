@@ -47,7 +47,7 @@ export default {
       short_name : 'learn-2',
     },
     meta: {
-       theme_color: '#c7ffe8;'
+       theme_color: 'rgb(199, 255, 232);'
     }
   },
 

@@ -19,7 +19,6 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
-  loading: true,
   loading: {
     color: "gold",
     height: "5px"
@@ -46,6 +45,9 @@ export default {
     manifest: {
       name: 'learning-2',
       short_name : 'learn-2',
+    },
+    meta: {
+      theme_color: '#c7ffe8;'
     }
   },
 

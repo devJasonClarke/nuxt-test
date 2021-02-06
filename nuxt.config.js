@@ -45,6 +45,7 @@ export default {
     manifest: {
       name: 'learning-2',
       short_name : 'learn-2',
+      background_color: 'rgb(199, 255, 232)'
     },
     meta: {
        theme_color: 'rgb(199, 255, 232)'
